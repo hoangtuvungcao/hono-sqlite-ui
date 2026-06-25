@@ -1,0 +1,48 @@
+{
+  "name": "hono-sqlite-ui",
+  "version": "1.0.0",
+  "description": "A lightweight, beautiful, plug-and-play SQLite Admin UI sub-app for Hono and Bun/Node.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "tsx test/dev-server.ts"
+  },
+  "keywords": [
+    "hono",
+    "sqlite",
+    "admin",
+    "dashboard",
+    "panel",
+    "bun",
+    "node",
+    "database",
+    "ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^2.0.6",
+    "@types/node": "^20.11.0",
+    "better-sqlite3": "^12.11.1",
+    "hono": "^4.0.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.22.4",
+    "typescript": "^5.3.3"
+  }
+}
