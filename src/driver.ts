@@ -17,6 +17,7 @@ export class SQLiteDriver {
     let dbInstance = dbInput;
     if (typeof dbInput === 'string') {
       if (typeof (globalThis as any).Bun !== 'undefined') {
+        // @ts-ignore
         const { Database } = await import('bun:sqlite');
         dbInstance = new Database(dbInput);
       } else {
