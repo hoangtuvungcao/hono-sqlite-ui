@@ -1,6 +1,24 @@
+# JavaScript / Node.js
 node_modules/
-dist/
+hono-sqlite-ui/dist/
+hono-sqlite-ui/node_modules/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+fastapi-sqlite-ui/dist/
+fastapi-sqlite-ui/build/
+fastapi-sqlite-ui/*.egg-info/
+fastapi-sqlite-ui/venv/
+fastapi-sqlite-ui/.venv/
+fastapi-sqlite-ui/__pycache__/
+
+# Databases
 *.db
 *.db-journal
+
+# Logs & OS files
 *.log
 .DS_Store
