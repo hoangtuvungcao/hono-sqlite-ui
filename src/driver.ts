@@ -23,6 +23,7 @@ export class SQLiteDriver {
       } else {
         try {
           // Dynamic import of better-sqlite3 for Node.js
+          // @ts-ignore
           const { default: Database } = await import('better-sqlite3');
           dbInstance = new Database(dbInput);
         } catch (e) {
