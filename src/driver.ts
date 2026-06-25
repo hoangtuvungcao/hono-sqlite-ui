@@ -28,7 +28,8 @@ export class SQLiteDriver {
           dbInstance = new Database(dbInput);
         } catch (e) {
           try {
-            // Fallback to native node:sqlite (Node 22.5.0+)
+            // Fallback  to native node:sqlite (Node 22.5.0+)
+            // @ts-ignore
             const { DatabaseSync } = await import('node:sqlite');
             dbInstance = new DatabaseSync(dbInput);
           } catch (e2) {
